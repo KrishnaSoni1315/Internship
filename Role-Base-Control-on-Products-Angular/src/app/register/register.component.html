@@ -1,0 +1,38 @@
+  <div class="wrapper">
+      <form class="form-signin" [formGroup]="registerForm" (ngSubmit)="onSubmit()">  
+        <h2 class="form-signin-heading">Please Sign Up</h2>
+        <span>Enter your personal details <strong> to create an account </strong></span>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="name" id="name" placeholder="Your Name" required="" autofocus="" />
+            <div *ngIf="submitted && registerForm.controls.name.errors" class="error">
+                <div *ngIf="registerForm.controls.name.errors.required">Name is required</div>
+              </div>
+            </div>
+
+        <div class="form-group">
+        <input type="email" class="form-control" formControlName="email" id="email" placeholder="Email Address" required="" autofocus="" />
+        <div *ngIf="submitted && registerForm.controls.email.errors" class="error">
+            <div *ngIf="registerForm.controls.email.errors.required">Email is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+        <input type="password" class="form-control" formControlName="password" id="pwd" placeholder="Password" required=""/>      
+        <div *ngIf="submitted && registerForm.controls.password.errors" class="error">
+            <div *ngIf="registerForm.controls.password.errors.required">Password is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+            <select class="form-control" formControlName="role" id="role" >
+                <option>buyer</option>
+                <option>seller</option>
+            </select>
+          </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>   
+        <a routerLink = "/login"> Already Have an Account? </a>
+      </form>
+    </div>
+

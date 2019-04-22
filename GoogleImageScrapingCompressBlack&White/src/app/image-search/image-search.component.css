@@ -1,0 +1,35 @@
+
+body{
+    text-align: center;
+}
+
+input[type=text]{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 600px;
+}
+.google{
+    text-align: center;
+    display: block;
+    clear: both;
+}
+.searching{
+    display: block;
+    clear: both;
+    margin-top: 200px;
+    margin-left: 600px;
+    /* border: 1px solid black; */
+    width: 650px;
+    height: 350px;
+    text-align: center
+}
+.grid-view{
+    width: 1600px;
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-left: 170px;
+}
+
+.imging{
+    border: 1px dotted gray;
+}

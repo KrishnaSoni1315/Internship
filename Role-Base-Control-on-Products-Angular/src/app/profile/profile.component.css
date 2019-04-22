@@ -1,0 +1,93 @@
+body {
+	background: #eee !important;	
+}
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+.form-signin-heading{
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+	* {box-sizing: border-box;}
+
+	body { 
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	.header {
+		overflow: hidden;
+		background-color: #f1f1f1;
+		padding: 20px 10px;
+	}
+	
+	.header a {
+		float: left;
+		color: black;
+		text-align: center;
+		padding: 12px;
+		text-decoration: none;
+		font-size: 18px; 
+		line-height: 25px;
+		border-radius: 4px;
+	}
+	
+	.header a:hover {
+		cursor: pointer;
+		background-color: #ddd;
+		color: black;
+	}
+	
+	.header a.active {
+		background-color: dodgerblue;
+		color: white;
+	}
+	
+	.header-right {
+		float: right;
+	}
+	
+	@media screen and (max-width: 500px) {
+		.header a {
+			float: none;
+			display: block;
+			text-align: left;
+		}
+		
+		.header-right {
+			float: none;
+		}
+	}

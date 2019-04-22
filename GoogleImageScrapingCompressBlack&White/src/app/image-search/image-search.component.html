@@ -1,0 +1,30 @@
+<header>
+  <nav>
+    <ul id="nav_bar">
+      <button type="button" (click)="history()" class="btn btn-primary" style="float: right;">keyword History</button>
+    </ul>
+  </nav>
+</header>
+
+<form>
+
+  <div class="searching">
+    <img class="google" src="assets/images/googlelogo.gif"><br>
+    <input type="text" placeholder="Search Google or type a Keyword" name="gShrch" [(ngModel)]="keywords.gShrch"
+      class="form-control form-control-lg" required>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="Search_download()" style="float: left;">Search</button>
+  </div>
+<br>
+  
+  
+  <div *ngIf="keywords.gShrch" class="grid-view"  >
+    <ng-container *ngFor="let i of keyword">
+      <img src="{{i.url}}" *ngIf="var1 == 'google'" width="300" height="300">
+      <img class="imging"  *ngIf="var1== 'local'" src="assets/images/{{keywords.gShrch}}/{{i}}" width="300" height="300">
+    </ng-container>
+    <br/>
+    <button type="button" *ngIf="var1 == 'google'" (click)="cmp_img()" class="btn btn-primary">Save</button>
+  </div>
+
+</form>

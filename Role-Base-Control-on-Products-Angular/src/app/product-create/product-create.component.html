@@ -1,0 +1,52 @@
+
+<div class="header">
+    <div class="header-right">
+      <a href="/product_display">Product List</a>
+      <a class="active" (click)="logout()">Logout</a>
+    </div>
+  </div>
+
+  
+<div class="wrapper">
+    
+    <form class="form-signin" [formGroup]="addForm" (ngSubmit)="onSubmit()" >
+ <h2 class="form-signin-heading">Please Add Product</h2>
+  <span>Enter your product details <strong> to Sell </strong></span>
+
+      <div class="form-group">
+        <input type="text" formControlName="product" placeholder="Product Name" class="form-control" id="product" 
+        [ngClass]="{ 'is-invalid': submitted && f.product.errors }" required="" autofocus="" />
+        <div *ngIf="submitted && f.product.errors">
+          <div *ngIf="f.product.errors.required">product is required</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <input type="text" formControlName="desc" placeholder="Description" class="form-control" id="desc" 
+        [ngClass]="{ 'is-invalid': submitted && f.desc.errors }" required="" autofocus="" />
+        <div *ngIf="submitted && f.desc.errors">
+          <div *ngIf="f.desc.errors.required">Description is required</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        
+        <input type="text" formControlName="price" placeholder="Product Price (Rs)" class="form-control" id="price" 
+        [ngClass]="{ 'is-invalid': submitted && f.price.errors }" required="" autofocus="" />
+        <div *ngIf="submitted && f.price.errors">
+          <div *ngIf="f.price.errors.required">Price is required</div>
+        </div>
+      </div>
+      
+
+      <div class="form-group">
+          <input type="number" formControlName="quantity" placeholder="Quantity" class="form-control" id="quantity" 
+          [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }" required="" autofocus="" />
+          <div *ngIf="submitted && f.quantity.errors">
+            <div *ngIf="f.quantity.errors.required">Quantity is required</div>
+          </div>
+      </div>
+  
+     <button class="btn btn-lg btn-success btn-block" type="submit">Save</button>   
+    </form>
+  </div>

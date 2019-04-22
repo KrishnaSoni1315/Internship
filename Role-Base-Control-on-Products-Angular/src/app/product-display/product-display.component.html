@@ -1,0 +1,35 @@
+
+<div class="header">
+  <div class="header-right">
+    <a  (click)="userProfile()">Profile</a>
+    <a class="active" (click)="logout()">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+  <h2><button (click)="addProduct()" class="btn btn-info">Add Product</button></h2>
+  <p>All Product Listing</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Operation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product.product}}</td>
+        <td>{{product.desc}}</td>
+        <td><b>{{product.price}}</b> $</td>
+        <td> {{product.quantity}}</td>
+        <td> <button (click)="updateProduct(product)" class="btn btn-info"> Edit</button>  
+          <button class="btn btn-danger" style="margin-left: 20px; ">
+            <a href="/product_display" (click)="deleteProduct(product)" style="color:white;">Delete</a>
+          </button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

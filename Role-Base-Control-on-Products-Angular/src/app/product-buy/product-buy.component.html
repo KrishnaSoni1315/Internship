@@ -1,0 +1,19 @@
+
+<div class="header">
+    <div class="header-right">
+        <a (click)="userProfile()">Profile</a>
+        <a class="active" (click)="logout()">Logout</a>
+    </div>
+  </div>
+
+   <div class="row" style="margin-left: 250px; margin-top: 100px; margin-right: 250px" >
+      <div class="col-sm-" *ngFor="let product of products">
+        <div class="card" style="width:200px; margin: 10px">
+          <div class="card-body" (click)="productDetails(product)">
+            <h5 class="card-title">{{product.product}}</h5>
+            <p class="card-text"><b>{{product.price}}</b> $</p>
+            <!-- <p class="card-subtitle" style="text-align:right;">{{product.quantity}}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>

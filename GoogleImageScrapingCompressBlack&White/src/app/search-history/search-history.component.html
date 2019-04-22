@@ -1,0 +1,31 @@
+<header>
+  <nav>
+    <ul id="nav_bar">
+    
+    </ul>
+  </nav>
+</header>
+
+<form class="col-md-8">
+  <button type="button" (click)="back()" class="btn btn-primary" style="float: left ;">Back</button>
+
+  <br>
+  <div class="page" *ngFor="let k of keyword" style="border: 1px dotted rgb(245, 241, 241);">
+    <table class="table">
+      <tbody>
+        <tr class="active" (click)="click(k.keyword)">
+          <td>{{k.keyword}}</td>
+          <td>Google Images</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><br>
+
+  <div *ngFor="let k of keyword" style="border: 1px dotted rgb(245, 241, 241); margin: 5px;">
+    <h6 *ngIf="msg == k.keyword">
+      <img src="assets/images/{{k.keyword}}/{{i}}" *ngFor="let i of images" width="200" height="200">
+    </h6>
+  </div>
+
+  
+</form>

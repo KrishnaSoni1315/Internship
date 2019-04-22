@@ -1,0 +1,35 @@
+
+<div class="header">
+    <div class="header-right">
+      <a href="/product_buy">Back</a>
+      <a class="active" (click)="logout()">Logout</a>
+    </div>
+  </div>
+
+<div class="wrapper">
+    
+    <form class="form-signin" [formGroup]="form" (ngSubmit)="onSubmit()" >
+
+  <h2 class="form-signin-heading"> Product</h2>
+  <span>View product details<strong> to Buy </strong></span>
+
+      <div class="form-group">
+        <input type="text" formControlName="product" class="form-control" id="product" disabled/>
+      </div>
+      
+      <div class="form-group">
+          <input type="text" formControlName="desc" class="form-control" id="desc" disabled/>
+      </div>
+
+      <div class="form-group">
+          <input type="text" formControlName="price" class="form-control" id="price" disabled/>
+      </div>
+      
+      <div class="form-group">
+          <input type="text" formControlName="quantity" class="form-control" id="quantity" disabled/>
+      </div>
+      
+      
+     <button class="btn btn-lg btn-success btn-block" type="submit">Buy</button>   
+    </form>
+  </div>
